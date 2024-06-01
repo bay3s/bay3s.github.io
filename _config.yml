@@ -1,0 +1,19 @@
+style: light
+footer: "follow my work <a href=\"https://github.com/bay3s\">github.com/bay3s</a>"
+markdown: kramdown
+remote_theme: bay3s/bay3s.github.io
+
+title: "Musings on ML, Math, Finance"
+description: ""
+url: "https://bay3s.github.io"
+header_pages:
+  - index.md
+  - contact.md
+
+posts:
+  output: true
+  permalink: /:topics/:year/:month/:day/:title:output_ext
+
+collections:
+  topics:
+    output: true

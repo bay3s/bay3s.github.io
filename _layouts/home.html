@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{{ content }}
+{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %}
+
+<ul>
+  {% for category in site.categories %}
+    {% assign category_name = category[0] %}
+    {% assign words = category_name | split: '-' %}
+    {% assign capitalized_words = '' %}
+    {% for word in words %}
+      {% assign capitalized_word = word | capitalize %}
+      {% assign capitalized_words = capitalized_words | append: capitalized_word %}
+      {% if forloop.last == false %}
+        {% assign capitalized_words = capitalized_words | append: ' ' %}
+      {% endif %}
+    {% endfor %}
+    <li>
+      <a href="{{ site.baseurl }}/topics/{{ category_name | slugify }}">{{ capitalized_words }}</a>
+    </li>
+  {% endfor %}
+</ul>

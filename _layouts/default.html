@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'none';
+      script-src 'self' https://cdn.mathjax.org https://cdnjs.cloudflare.com 'unsafe-eval';
+      style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+      img-src 'self';
+      font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com https://fonts.googleapis.com 'unsafe-inline';
+      connect-src 'self';
+      media-src 'self';
+      object-src 'self';
+      child-src 'self';
+      form-action 'none';
+      base-uri 'self'
+    "
+  />
+
+  <meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  {%- include head.html -%}
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      "HTML-CSS": {
+        availableFonts: ["TeX"]
+      }
+    });
+  </script>
+
+  <body>
+    <div class="container">
+
+      {%- include header.html -%}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+    </div>
+  </body>
+</html>
