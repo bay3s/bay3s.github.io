@@ -3,10 +3,10 @@ layout: post
 title:  "Dynamic Programming"
 date:   22-09-2022
 categories: reinforcement-learning
-sub_category: dynamic-programming
+sub_category: dynamic programming
 ---
 
-<p>Dynamic programming refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process. Dynamic programming is the foundation for understanding reinforcement learning. RL methods can be seen as attempting to achieve the same results as dynamic programming but with an imperfect model fo the environment and less computation.</p>
+<p>Dynamic programming refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process. Reinforcement learning methods can be seen as attempting to achieve the same results as dynamic programming but with an imperfect model for the environment and less computation.</p>
 <p>The key ideas in dynamic programming and reinforcement learning are the use of value functions to organize and structure the search for good policies. We can obtain optimal policies in a known Markov decision process using dynamic programming once we have found the optimal state value function $V^*$ and state-action value function $Q^*$ that satisfy the Bellman optimality equations:</p>
 
 $$
