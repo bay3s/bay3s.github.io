@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "REINFORCE algorithms"
+# title: "REINFORCE algorithms"
 author: "Sid Chaubal"
 categories: notes
 tags: [rl, applied-math]
 ---
 # Reinforcement Learning
 In reinforcement learning, an agent interacts with an environment through actions based on its policy. The policy $\pi$ is a function mapping states $s_t \in \mathcal{S}$ to actions $a_t \in \mathcal{A}$, and may be stochastic or deterministic. For every state, a deterministic policy selects a single action, while a stochastic policy outputs a probability distribution from which an action is sampled. A policy can be expressed as $\pi(s): \mathcal{S} \rightarrow \mathcal{A}$ in the deterministic case, and $\pi(s, a): \mathcal{S} \times \mathcal{A} \rightarrow \left[0, 1\right]$ giving the probability of choosing action an $a \in \mathcal{A}$ in state $s \in \mathcal{S}$ in the stochastic case.
+
+
 # Optimization Objective
 At $=0$, a starting environment state $s_0 \in \mathcal{S}$ is sampled from the initial state distribution $\rho_0$. At each time step $t$, the agent infers an action $a_t \in \mathcal{A}$ to take given $s_t \in \mathcal{S}$ based on its policy $\pi$. The agent's action $a_t$ influences the environment, resulting in a state transition from $s_t$ to $s_{t+1} \in \mathcal{S}$, and the agent receives a scalar reward $r_t \in \mathbb{R}$. A trajectory is a chronological sequence of interactions $\tau = \{s_0, a_0, r_0, s_{1}, ...\}$ starting from the initial state $s_0$. The discounted return of a trajectory is computed as
 

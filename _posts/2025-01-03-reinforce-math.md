@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "REINFORCE derivations"
+title: "The math behind REINFORCE"
 author: "Sid Chaubal"
 categories: notes
 tags: [rl, applied-math]

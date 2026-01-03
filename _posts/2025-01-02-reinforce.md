@@ -5,7 +5,6 @@ author: "Sid Chaubal"
 categories: notes
 tags: [rl, applied-math]
 ---
-#### REINFORCE Algorithms
 *Objective Function*
 - For gradient learning algorithms, it is necessary to have a performance measure to optimise.
 - A very natural one for any immediate-feedback reinforcement learning problem is the expected value of the scalar reinforcement signal that is observed during the interaction loop.
